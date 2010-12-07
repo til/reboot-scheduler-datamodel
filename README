@@ -1,0 +1,22 @@
+The datamodel of the scheduler for the reboot radio software.
+
+It contains a lot of openacs specific elements that don't make a lot
+of sense without an understanding of the openacs internals, please try
+to read over it. Also a lot of functionality of the overall system is
+not reflected in this datamodel because it is supported by standard
+mechanisms of the openacs framework, especially user and permissions
+management.
+
+The most relevant part of these files is in radio-programs-create.sql
+- the tables programs, emissions.
+
+radio-recurring-create.sql contains the datamodel to store recurring
+time specifications (e.g. "every thursday 18:00-19:00", or "every 2nd
+and 4th wednesday of the month 12:00-14:00"), which are both used by
+programs and by containers.
+
+radio-containers-create.sql defines the containers - which are
+recurring time frames that are used to divide areas of responsibility
+between different editorial groups of the radio.
+
+Feel free to contact me if there are any questions.
